@@ -1,10 +1,13 @@
 from openai import OpenAI
 import os
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 import base64
 import streamlit as st
-# load_dotenv()
-# api_key = os.getenv("openai_api_key")
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY", default=None)
+
+if api_key is None: # load key from Github environment
+    api_key = os.environ.get("OPENAI_API_KEY")
 
 
 def load_openai_api_key():
@@ -15,7 +18,7 @@ def load_openai_api_key():
         key = f.readline()
     return key
 
-api_key = load_openai_api_key()
+# api_key = load_openai_api_key()
 client = OpenAI(api_key=api_key)
 
 def get_answer(messages):
