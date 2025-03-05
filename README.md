@@ -1,4 +1,4 @@
 # audio-chatbot
 Audio Chatbot using OpenAI
 
-<br>New line added
+<br>Ref: https://blog.futuresmart.ai/building-a-conversational-voice-chatbot-integrating-openais-speech-to-text-text-to-speech
